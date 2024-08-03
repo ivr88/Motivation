@@ -1,7 +1,6 @@
 import SwiftUI
 
 class MainViewModel: ObservableObject {
-    @Published var currentIndex = 0
     var texts: [TextItem] = []
 
     init(category: Category) {

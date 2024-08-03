@@ -5,6 +5,10 @@ enum Category: String, CaseIterable, Identifiable {
     case friendship = "Friendship"
     
     var id: String { self.rawValue }
+    
+    var localized: String {
+        return NSLocalizedString(self.rawValue, comment: "")
+    }
 }
 
 enum BackgroundColor: String, CaseIterable, Identifiable {
@@ -12,6 +16,10 @@ enum BackgroundColor: String, CaseIterable, Identifiable {
     case red = "Red"
     
     var id: String { self.rawValue }
+    
+    var localized: String {
+        return NSLocalizedString(self.rawValue, comment: "")
+    }
 }
 
 enum Gender: String, CaseIterable, Identifiable {
@@ -19,6 +27,10 @@ enum Gender: String, CaseIterable, Identifiable {
     case female = "Female"
     
     var id: String { self.rawValue }
+    
+    var localized: String {
+        return NSLocalizedString(self.rawValue, comment: "")
+    }
 }
 
 struct UserPreferences {

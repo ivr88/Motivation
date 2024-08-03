@@ -25,7 +25,7 @@ struct OnboardingView: View {
                     Button(action: {
                         viewModel.nextStep()
                     }) {
-                        Text(viewModel.currentStep < 2 ? "Next" : "Finish")
+                        Text(viewModel.currentStep < 2 ? NSLocalizedString("Next", comment: "") : NSLocalizedString("Finish", comment: ""))
                             .frame(maxWidth: .infinity)
                             .padding()
                             .background(viewModel.isNextButtonEnabled ? Color.blue : Color.gray)

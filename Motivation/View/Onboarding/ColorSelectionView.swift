@@ -5,7 +5,7 @@ struct ColorSelectionView: View {
 
     var body: some View {
         VStack {
-            Text("Choose Background Color")
+            Text(NSLocalizedString("Choose background color", comment: ""))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
@@ -13,7 +13,7 @@ struct ColorSelectionView: View {
                 Button(action: {
                     selectedColor = color
                 }) {
-                    Text(color.rawValue)
+                    Text(color.localized)
                         .padding()
                         .background(selectedColor == color ? Color.purple : Color.clear)
                         .foregroundColor(selectedColor == color ? .white : .black)

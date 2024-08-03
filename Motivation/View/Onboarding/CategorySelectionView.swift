@@ -5,7 +5,7 @@ struct CategorySelectionView: View {
 
     var body: some View {
         VStack {
-            Text("Choose Category")
+            Text(NSLocalizedString("Choose category", comment: ""))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
@@ -13,7 +13,7 @@ struct CategorySelectionView: View {
                 Button(action: {
                     selectedCategory = category
                 }) {
-                    Text(category.rawValue)
+                    Text(category.localized)
                         .padding()
                         .background(selectedCategory == category ? Color.purple : Color.clear)
                         .foregroundColor(selectedCategory == category ? .white : .black)

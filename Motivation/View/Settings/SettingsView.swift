@@ -10,13 +10,13 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Preferences")) {
+                Section {
                     Picker("Category", selection: $selectedCategory) {
                         Text("Love").tag(Category.love)
                         Text("Friendship").tag(Category.friendship)
                     }
 
-                    Picker("Background Color", selection: $selectedColor) {
+                    Picker("Background color", selection: $selectedColor) {
                         Text("Blue").tag(BackgroundColor.blue)
                         Text("Red").tag(BackgroundColor.red)
                     }
@@ -31,7 +31,7 @@ struct SettingsView: View {
                             UIApplication.shared.open(url)
                         }
                     }) {
-                        Text("Change Language")
+                        Text("Change language")
                             .foregroundColor(.blue)
                     }
                 }
@@ -40,7 +40,7 @@ struct SettingsView: View {
             .navigationBarItems(trailing: Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }) {
-                Text("Закрыть")
+                Text("Close")
                     .foregroundColor(.blue)
             })
         }

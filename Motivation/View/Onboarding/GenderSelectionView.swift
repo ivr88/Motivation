@@ -5,7 +5,7 @@ struct GenderSelectionView: View {
 
     var body: some View {
         VStack {
-            Text("Choose Your Gender")
+            Text(NSLocalizedString("Choose your gender", comment: ""))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
@@ -13,7 +13,7 @@ struct GenderSelectionView: View {
                 Button(action: {
                     selectedGender = gender
                 }) {
-                    Text(gender.rawValue)
+                    Text(gender.localized)
                         .padding()
                         .background(selectedGender == gender ? Color.purple : Color.clear)
                         .foregroundColor(selectedGender == gender ? .white : .black)
